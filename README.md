@@ -29,7 +29,7 @@
   - 객체 및 배열을 parentNode에 삽입
   - ParentNode의 자식 중 first, last, 특정 index 지정 가능
 - insertBesideSiblingBy
-  - 객체 및 배열을 특정 형제 노드 left 또는 right에 삽입
+  - 객체 및 배열을 특정 형제 노드의 left 또는 right에 삽입
 - insertAtPosition
   - 특정 위치값 (예시: "1.1.2")에 객체 및 배열을 삽입
 
