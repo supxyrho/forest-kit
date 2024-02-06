@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1707213199174" clover="3.2.0">
+  <project timestamp="1707213199174" name="All files">
+    <metrics statements="569" coveredstatements="559" conditionals="114" coveredconditionals="104" methods="148" coveredmethods="146" elements="831" coveredelements="809" complexity="0" loc="569" ncloc="569" packages="4" files="84" classes="84"/>
+    <package name="dist._internal">
+      <metrics statements="23" coveredstatements="22" conditionals="1" coveredconditionals="1" methods="11" coveredmethods="10"/>
+      <file name="counter.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/_internal/counter.js">
+        <metrics statements="7" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="3"/>
+        <line num="3" count="15" type="cond" truecount="1" falsecount="0"/>
+        <line num="4" count="56" type="stmt"/>
+        <line num="5" count="56" type="stmt"/>
+        <line num="7" count="79" type="stmt"/>
+        <line num="9" count="172" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="16" count="15" type="stmt"/>
+      </file>
+      <file name="createNumberIncrementer.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/_internal/createNumberIncrementer.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+      <file name="satisfiesAllPropTypes.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/_internal/satisfiesAllPropTypes.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="12" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+      </file>
+      <file name="store.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/_internal/store.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="44" type="stmt"/>
+        <line num="9" count="44" type="stmt"/>
+        <line num="11" count="376" type="stmt"/>
+        <line num="13" count="596" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+      </file>
+      <file name="typeCheck.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/_internal/typeCheck.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="dist.operators">
+      <metrics statements="291" coveredstatements="287" conditionals="56" coveredconditionals="51" methods="63" coveredmethods="63"/>
+      <file name="addIncrementalNumberToEachNode.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/addIncrementalNumberToEachNode.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="12" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="addPositionPropToEachNode.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/addPositionPropToEachNode.js">
+        <metrics statements="19" coveredstatements="19" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="16" type="stmt"/>
+        <line num="14" count="16" type="stmt"/>
+        <line num="15" count="352" type="stmt"/>
+        <line num="16" count="352" type="cond" truecount="3" falsecount="0"/>
+        <line num="19" count="192" type="stmt"/>
+        <line num="20" count="192" type="stmt"/>
+        <line num="22" count="192" type="stmt"/>
+        <line num="24" count="80" type="stmt"/>
+        <line num="25" count="80" type="stmt"/>
+        <line num="27" count="80" type="stmt"/>
+        <line num="28" count="80" type="stmt"/>
+        <line num="31" count="80" type="stmt"/>
+        <line num="34" count="16" type="stmt"/>
+        <line num="38" count="192" type="stmt"/>
+        <line num="41" count="5" type="stmt"/>
+      </file>
+      <file name="changePropNameToEachNode.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/changePropNameToEachNode.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+      <file name="deepFlatten.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/deepFlatten.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="13" type="stmt"/>
+        <line num="5" count="13" type="stmt"/>
+        <line num="6" count="319" type="stmt"/>
+        <line num="8" count="13" type="stmt"/>
+      </file>
+      <file name="ensureArray.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/ensureArray.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+      <file name="every.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/every.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+      <file name="everyOnLeafNodes.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/everyOnLeafNodes.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+      <file name="extractLeafNodes.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/extractLeafNodes.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+      </file>
+      <file name="extractNDepthNodes.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/extractNDepthNodes.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="12" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="filter.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/filter.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="34" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+      </file>
+      <file name="filterBy.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/filterBy.js">
+        <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="19" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="25" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="30" count="11" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+      </file>
+      <file name="filterManyBy.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/filterManyBy.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="filterOneBy.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/filterOneBy.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="find.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/find.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="15" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+      </file>
+      <file name="findBy.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/findBy.js">
+        <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="14" type="stmt"/>
+        <line num="17" count="14" type="stmt"/>
+        <line num="18" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="13" type="stmt"/>
+        <line num="22" count="23" type="stmt"/>
+        <line num="23" count="13" type="stmt"/>
+        <line num="24" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="27" count="12" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+      </file>
+      <file name="findManyBy.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/findManyBy.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="findOneBy.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/findOneBy.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+      </file>
+      <file name="hasChildren.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/hasChildren.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="3" count="34" type="stmt"/>
+        <line num="4" count="1294" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="10" count="34" type="stmt"/>
+      </file>
+      <file name="insertAtPositionBy.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/insertAtPositionBy.js">
+        <metrics statements="20" coveredstatements="18" conditionals="10" coveredconditionals="7" methods="2" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="13" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="6" type="cond" truecount="3" falsecount="1"/>
+        <line num="24" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+      </file>
+      <file name="insertBesideSiblingBy.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/insertBesideSiblingBy.js">
+        <metrics statements="19" coveredstatements="18" conditionals="5" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="6" type="cond" truecount="2" falsecount="1"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+      </file>
+      <file name="insertFromParentBy.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/insertFromParentBy.js">
+        <metrics statements="25" coveredstatements="24" conditionals="16" coveredconditionals="15" methods="5" coveredmethods="5"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="28" type="stmt"/>
+        <line num="11" count="28" type="stmt"/>
+        <line num="12" count="24" type="stmt"/>
+        <line num="14" count="24" type="stmt"/>
+        <line num="15" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="17" count="20" type="stmt"/>
+        <line num="21" count="28" type="stmt"/>
+        <line num="22" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="14" type="stmt"/>
+        <line num="25" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="22" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="29" count="18" type="cond" truecount="4" falsecount="0"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="31" count="14" type="cond" truecount="1" falsecount="1"/>
+        <line num="32" count="14" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="36" count="3" type="stmt"/>
+      </file>
+      <file name="isLeafNode.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/isLeafNode.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="71" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+      </file>
+      <file name="map.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/map.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="13" type="stmt"/>
+        <line num="5" count="13" type="stmt"/>
+        <line num="6" count="72" type="stmt"/>
+        <line num="8" count="13" type="stmt"/>
+      </file>
+      <file name="mapBy.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/mapBy.js">
+        <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="35" type="stmt"/>
+        <line num="17" count="35" type="stmt"/>
+        <line num="18" count="35" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="34" type="stmt"/>
+        <line num="22" count="34" type="stmt"/>
+        <line num="23" count="30" type="stmt"/>
+        <line num="24" count="30" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="27" count="29" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
+      </file>
+      <file name="mapManyBy.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/mapManyBy.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="mapOneBy.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/mapOneBy.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="mergeTwoTrees.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/mergeTwoTrees.js">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="12" type="stmt"/>
+        <line num="13" count="78" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+      </file>
+      <file name="removePropToEachNode.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/removePropToEachNode.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="16" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+      </file>
+      <file name="some.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/some.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+      <file name="someOnLeafNodes.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/someOnLeafNodes.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+      <file name="tap.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/tap.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+      </file>
+      <file name="tapBy.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/tapBy.js">
+        <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="19" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="23" count="14" type="stmt"/>
+        <line num="24" count="5" type="stmt"/>
+        <line num="25" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+      </file>
+      <file name="tapManyBy.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/tapManyBy.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="tapOneBy.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/tapOneBy.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="traverseWithApply.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/traverseWithApply.js">
+        <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="6" methods="5" coveredmethods="5"/>
+        <line num="3" count="18" type="stmt"/>
+        <line num="8" count="18" type="stmt"/>
+        <line num="9" count="412" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="851" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="331" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="323" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="18" type="stmt"/>
+      </file>
+      <file name="verifyNodeAllPropsTypeMatch.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/verifyNodeAllPropsTypeMatch.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+      </file>
+      <file name="verifyNodesAllPropsTypeMatch.js" path="/Users/gyutae/Desktop/dev-me/forest-kit/dist/operators/verifyNodesAllPropsTypeMatch.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src._internal">
+      <metrics statements="21" coveredstatements="20" conditionals="1" coveredconditionals="1" methods="11" coveredmethods="10"/>
+      <file name="counter.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/_internal/counter.ts">
+        <metrics statements="6" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="3"/>
+        <line num="7" count="15" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="56" type="stmt"/>
+        <line num="10" count="56" type="stmt"/>
+        <line num="12" count="79" type="stmt"/>
+        <line num="14" count="172" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+      <file name="createNumberIncrementer.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/_internal/createNumberIncrementer.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="12" type="stmt"/>
+      </file>
+      <file name="satisfiesAllPropTypes.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/_internal/satisfiesAllPropTypes.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="9" count="12" type="stmt"/>
+      </file>
+      <file name="store.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/_internal/store.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="7" count="44" type="stmt"/>
+        <line num="9" count="44" type="stmt"/>
+        <line num="11" count="376" type="stmt"/>
+        <line num="13" count="596" type="stmt"/>
+      </file>
+      <file name="typeCheck.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/_internal/typeCheck.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.operators">
+      <metrics statements="234" coveredstatements="230" conditionals="56" coveredconditionals="51" methods="63" coveredmethods="63"/>
+      <file name="addIncrementalNumberToEachNode.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/addIncrementalNumberToEachNode.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="12" type="stmt"/>
+      </file>
+      <file name="addPositionPropToEachNode.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/addPositionPropToEachNode.ts">
+        <metrics statements="17" coveredstatements="17" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="16" count="16" type="stmt"/>
+        <line num="21" count="16" type="stmt"/>
+        <line num="22" count="352" type="stmt"/>
+        <line num="24" count="352" type="cond" truecount="3" falsecount="0"/>
+        <line num="27" count="192" type="stmt"/>
+        <line num="28" count="192" type="stmt"/>
+        <line num="30" count="192" type="stmt"/>
+        <line num="33" count="80" type="stmt"/>
+        <line num="34" count="80" type="stmt"/>
+        <line num="37" count="80" type="stmt"/>
+        <line num="38" count="80" type="stmt"/>
+        <line num="41" count="80" type="stmt"/>
+        <line num="45" count="16" type="stmt"/>
+        <line num="50" count="16" type="stmt"/>
+        <line num="52" count="192" type="stmt"/>
+      </file>
+      <file name="changePropNameToEachNode.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/changePropNameToEachNode.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="12" type="stmt"/>
+      </file>
+      <file name="deepFlatten.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/deepFlatten.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="5" count="13" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="9" count="161" type="stmt"/>
+        <line num="11" count="319" type="stmt"/>
+      </file>
+      <file name="ensureArray.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/ensureArray.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+      </file>
+      <file name="every.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/every.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+      </file>
+      <file name="everyOnLeafNodes.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/everyOnLeafNodes.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+      </file>
+      <file name="extractLeafNodes.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/extractLeafNodes.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+      </file>
+      <file name="extractNDepthNodes.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/extractNDepthNodes.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="12" type="stmt"/>
+      </file>
+      <file name="filter.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/filter.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="13" count="34" type="stmt"/>
+      </file>
+      <file name="filterBy.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/filterBy.ts">
+        <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="28" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="34" count="4" type="stmt"/>
+        <line num="35" count="4" type="stmt"/>
+        <line num="46" count="4" type="stmt"/>
+        <line num="47" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="53" count="3" type="stmt"/>
+        <line num="57" count="3" type="stmt"/>
+        <line num="59" count="4" type="stmt"/>
+        <line num="60" count="11" type="stmt"/>
+        <line num="63" count="8" type="stmt"/>
+      </file>
+      <file name="filterManyBy.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/filterManyBy.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
+      <file name="filterOneBy.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/filterOneBy.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
+      <file name="find.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/find.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="12" count="15" type="stmt"/>
+      </file>
+      <file name="findBy.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/findBy.ts">
+        <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="24" count="14" type="stmt"/>
+        <line num="25" count="14" type="stmt"/>
+        <line num="27" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="33" count="13" type="stmt"/>
+        <line num="34" count="13" type="stmt"/>
+        <line num="39" count="23" type="stmt"/>
+        <line num="47" count="13" type="stmt"/>
+        <line num="48" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="54" count="12" type="stmt"/>
+      </file>
+      <file name="findManyBy.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/findManyBy.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+      </file>
+      <file name="findOneBy.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/findOneBy.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+      </file>
+      <file name="hasChildren.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/hasChildren.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="4" count="34" type="stmt"/>
+        <line num="6" count="34" type="stmt"/>
+        <line num="8" count="1294" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+      </file>
+      <file name="insertAtPositionBy.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/insertAtPositionBy.ts">
+        <metrics statements="16" coveredstatements="14" conditionals="10" coveredconditionals="7" methods="2" coveredmethods="2"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="23" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="26" count="6" type="stmt"/>
+        <line num="31" count="6" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="6" type="cond" truecount="3" falsecount="1"/>
+        <line num="45" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+      </file>
+      <file name="insertBesideSiblingBy.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/insertBesideSiblingBy.ts">
+        <metrics statements="14" coveredstatements="13" conditionals="5" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="6" type="cond" truecount="2" falsecount="1"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="47" count="4" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+      </file>
+      <file name="insertFromParentBy.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/insertFromParentBy.ts">
+        <metrics statements="18" coveredstatements="17" conditionals="16" coveredconditionals="15" methods="5" coveredmethods="5"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="18" count="28" type="stmt"/>
+        <line num="19" count="28" type="stmt"/>
+        <line num="23" count="28" type="stmt"/>
+        <line num="26" count="24" type="stmt"/>
+        <line num="38" count="24" type="stmt"/>
+        <line num="39" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="20" type="stmt"/>
+        <line num="47" count="28" type="stmt"/>
+        <line num="48" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="14" type="stmt"/>
+        <line num="52" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="53" count="22" type="cond" truecount="2" falsecount="0"/>
+        <line num="54" count="18" type="cond" truecount="4" falsecount="0"/>
+        <line num="55" count="4" type="stmt"/>
+        <line num="58" count="14" type="cond" truecount="1" falsecount="1"/>
+        <line num="60" count="0" type="stmt"/>
+      </file>
+      <file name="isLeafNode.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/isLeafNode.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="10" count="71" type="stmt"/>
+      </file>
+      <file name="map.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/map.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="13" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="12" count="72" type="stmt"/>
+      </file>
+      <file name="mapBy.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/mapBy.ts">
+        <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="25" count="35" type="stmt"/>
+        <line num="26" count="35" type="stmt"/>
+        <line num="28" count="35" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="34" count="34" type="stmt"/>
+        <line num="35" count="34" type="stmt"/>
+        <line num="41" count="34" type="stmt"/>
+        <line num="47" count="30" type="stmt"/>
+        <line num="48" count="30" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="54" count="29" type="stmt"/>
+      </file>
+      <file name="mapManyBy.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/mapManyBy.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+      </file>
+      <file name="mapOneBy.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/mapOneBy.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+      </file>
+      <file name="mergeTwoTrees.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/mergeTwoTrees.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="12" type="stmt"/>
+        <line num="23" count="78" type="stmt"/>
+      </file>
+      <file name="removePropToEachNode.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/removePropToEachNode.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="9" count="16" type="stmt"/>
+      </file>
+      <file name="some.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/some.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+      </file>
+      <file name="someOnLeafNodes.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/someOnLeafNodes.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+      </file>
+      <file name="tap.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/tap.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="tapBy.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/tapBy.ts">
+        <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="26" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="29" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="35" count="5" type="stmt"/>
+        <line num="36" count="5" type="stmt"/>
+        <line num="42" count="14" type="stmt"/>
+        <line num="48" count="5" type="stmt"/>
+        <line num="49" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="55" count="4" type="stmt"/>
+      </file>
+      <file name="tapManyBy.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/tapManyBy.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+      <file name="tapOneBy.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/tapOneBy.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+      <file name="traverseWithApply.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/traverseWithApply.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="6" coveredconditionals="6" methods="5" coveredmethods="5"/>
+        <line num="8" count="18" type="stmt"/>
+        <line num="10" count="18" type="stmt"/>
+        <line num="16" count="412" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="27" count="851" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="331" type="cond" truecount="2" falsecount="0"/>
+        <line num="42" count="323" type="cond" truecount="2" falsecount="0"/>
+      </file>
+      <file name="verifyNodeAllPropsTypeMatch.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/verifyNodeAllPropsTypeMatch.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="verifyNodesAllPropsTypeMatch.ts" path="/Users/gyutae/Desktop/dev-me/forest-kit/src/operators/verifyNodesAllPropsTypeMatch.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

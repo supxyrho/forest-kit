@@ -1,0 +1,82 @@
+'use strict';
+
+var operators_addIncrementalNumberToEachNode = require('./addIncrementalNumberToEachNode.js');
+var operators_addPositionPropToEachNode = require('./addPositionPropToEachNode.js');
+var operators_changePropNameToEachNode = require('./changePropNameToEachNode.js');
+var operators_deepFlatten = require('./deepFlatten.js');
+var operators_ensureArray = require('./ensureArray.js');
+var operators_every = require('./every.js');
+var operators_everyOnLeafNodes = require('./everyOnLeafNodes.js');
+var operators_extractLeafNodes = require('./extractLeafNodes.js');
+var operators_extractNDepthNodes = require('./extractNDepthNodes.js');
+var ramda = require('ramda');
+var operators_filterBy = require('./filterBy.js');
+var operators_filterManyBy = require('./filterManyBy.js');
+var operators_filterOneBy = require('./filterOneBy.js');
+var operators_find = require('./find.js');
+var operators_findBy = require('./findBy.js');
+var operators_findManyBy = require('./findManyBy.js');
+var operators_findOneBy = require('./findOneBy.js');
+var operators_hasChildren = require('./hasChildren.js');
+var operators_insertAtPositionBy = require('./insertAtPositionBy.js');
+var operators_insertBesideSiblingBy = require('./insertBesideSiblingBy.js');
+var operators_insertFromParentBy = require('./insertFromParentBy.js');
+var operators_isLeafNode = require('./isLeafNode.js');
+var operators_map = require('./map.js');
+var operators_mapBy = require('./mapBy.js');
+var operators_mapManyBy = require('./mapManyBy.js');
+var operators_mapOneBy = require('./mapOneBy.js');
+var operators_mergeTwoTrees = require('./mergeTwoTrees.js');
+var operators_removePropToEachNode = require('./removePropToEachNode.js');
+var operators_some = require('./some.js');
+var operators_someOnLeafNodes = require('./someOnLeafNodes.js');
+var operators_tap = require('./tap.js');
+var operators_tapBy = require('./tapBy.js');
+var operators_tapOneBy = require('./tapOneBy.js');
+var operators_tapManyBy = require('./tapManyBy.js');
+var operators_traverseWithApply = require('./traverseWithApply.js');
+var operators_verifyNodeAllPropsTypeMatch = require('./verifyNodeAllPropsTypeMatch.js');
+var operators_verifyNodesAllPropsTypeMatch = require('./verifyNodesAllPropsTypeMatch.js');
+
+
+
+exports.addIncrementalNumberToEachNode = operators_addIncrementalNumberToEachNode.addIncrementalNumberToEachNode;
+exports.addPositionPropToEachNode = operators_addPositionPropToEachNode.addPositionPropToEachNode;
+exports.changePropNameToEachNode = operators_changePropNameToEachNode.changePropNameToEachNode;
+exports.deepFlatten = operators_deepFlatten.deepFlatten;
+exports.ensureArray = operators_ensureArray.ensureArray;
+exports.every = operators_every.every;
+exports.everyOnLeafNodes = operators_everyOnLeafNodes.everyOnLeafNodes;
+exports.extractLeafNodes = operators_extractLeafNodes.extractLeafNodes;
+exports.extractNDepthNodes = operators_extractNDepthNodes.extractNDepthNodes;
+Object.defineProperty(exports, "filter", {
+  enumerable: true,
+  get: function () { return ramda.filter; }
+});
+exports.filterBy = operators_filterBy.filterBy;
+exports.filterManyBy = operators_filterManyBy.filterManyBy;
+exports.filterOneBy = operators_filterOneBy.filterOneBy;
+exports.find = operators_find.find;
+exports.findBy = operators_findBy.findBy;
+exports.findManyBy = operators_findManyBy.findManyBy;
+exports.findOneBy = operators_findOneBy.findOneBy;
+exports.hasChildren = operators_hasChildren.hasChildren;
+exports.insertAtPosition = operators_insertAtPositionBy.insertAtPosition;
+exports.insertBesideSiblingBy = operators_insertBesideSiblingBy.insertBesideSiblingBy;
+exports.insertFromParentBy = operators_insertFromParentBy.insertFromParentBy;
+exports.isLeafNode = operators_isLeafNode.isLeafNode;
+exports.map = operators_map.map;
+exports.mapBy = operators_mapBy.mapBy;
+exports.mapManyBy = operators_mapManyBy.mapManyBy;
+exports.mapOneBy = operators_mapOneBy.mapOneBy;
+exports.mergeTwoTrees = operators_mergeTwoTrees.mergeTwoTrees;
+exports.removePropToEachNode = operators_removePropToEachNode.removePropToEachNode;
+exports.some = operators_some.some;
+exports.someOnLeafNodes = operators_someOnLeafNodes.someOnLeafNodes;
+exports.tap = operators_tap.tap;
+exports.tapBy = operators_tapBy.tapBy;
+exports.tapOneBy = operators_tapOneBy.tapOneBy;
+exports.tapManyBy = operators_tapManyBy.tapManyBy;
+exports.traverseWithApply = operators_traverseWithApply.traverseWithApply;
+exports.verifyNodeAllPropsTypeMatch = operators_verifyNodeAllPropsTypeMatch.verifyNodeAllPropsTypeMatch;
+exports.verifyNodesAllPropsTypeMatch = operators_verifyNodesAllPropsTypeMatch.verifyNodesAllPropsTypeMatch;
