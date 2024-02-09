@@ -43,6 +43,7 @@
     "start": "node ./dist/bundle.js",
     "pretest": "rimraf dist coverage",
     "test": "jest  --coverage",
+    "test:watch": "jest --watch",
     "build-and-start": "npm run build && npm run start",
     "build": "tsc && rollup -c --bundleConfigAsCjs",
     "watch": "tsc && rollup -cw --bundleConfigAsCjs",
