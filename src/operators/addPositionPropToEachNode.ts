@@ -15,34 +15,9 @@ export const addPositionPropToEachNode = R.curry(
       position: [0],
     });
 
-    // @TODO: 외부 함수로 분리 및 함수합성 처리
-    const onMoveCursor = (direction) => {
-      const { position } = store.get();
-
-      switch (direction) {
-        case "next":
-          {
-            const last = position.pop();
-            store.update({ position: [...position, last + 1] });
-          }
-          break;
-
-        case "down":
-          store.update({ position: [...position, 0] });
-          break;
-
-        case "up":
-          position.pop();
-          store.update({
-            position: [...position],
-          });
-          break;
-      }
-    };
-
     const defaultOps = {
       ...ops,
-      onMoveCursor,
+      onMoveCursor: onMoveCursor(store),
     };
 
     return map(
@@ -52,3 +27,28 @@ export const addPositionPropToEachNode = R.curry(
     );
   }
 );
+
+// @TODO: 추후 Symnbol로 변경
+const MOVE_NEXT = "next";
+const MOVE_DOWN = "down";
+const MOVE_UP = "up";
+
+const onMoveCursor = (store) => {
+  const moveNext = (position) =>
+    R.append(R.last(position) + 1, R.init(position));
+  const moveDown = (position) => R.append(0, position);
+  const moveUp = (position) =>
+    position.length > 0 ? R.init(position) : position;
+
+  return (direction) => {
+    const { position } = store.get();
+    const updateFn = R.cond([
+      [R.equals(MOVE_NEXT), () => moveNext(position)],
+      [R.equals(MOVE_DOWN), () => moveDown(position)],
+      [R.equals(MOVE_UP), () => moveUp(position)],
+      [R.T, () => position],
+    ]);
+
+    store.update({ position: updateFn(direction) });
+  };
+};
