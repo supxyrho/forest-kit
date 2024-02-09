@@ -33,22 +33,25 @@ const MOVE_NEXT = "next";
 const MOVE_DOWN = "down";
 const MOVE_UP = "up";
 
-const onMoveCursor = (store) => {
-  const moveNext = (position) =>
-    R.append(R.last(position) + 1, R.init(position));
-  const moveDown = (position) => R.append(0, position);
-  const moveUp = (position) =>
-    position.length > 0 ? R.init(position) : position;
+const moveNext = (postion) =>
+  R.converge(R.append, [R.pipe(R.last, R.inc), R.init])(postion);
 
-  return (direction) => {
-    const { position } = store.get();
-    const updateFn = R.cond([
-      [R.equals(MOVE_NEXT), () => moveNext(position)],
-      [R.equals(MOVE_DOWN), () => moveDown(position)],
-      [R.equals(MOVE_UP), () => moveUp(position)],
-      [R.T, () => position],
-    ]);
+const moveDown = R.append(0);
 
-    store.update({ position: updateFn(direction) });
-  };
+const moveUp = (position) =>
+  position.length > 0 ? R.init(position) : position;
+
+const updatePositionByDirection = R.cond([
+  [R.equals(MOVE_NEXT), () => moveNext],
+  [R.equals(MOVE_DOWN), () => moveDown],
+  [R.equals(MOVE_UP), () => moveUp],
+  // @TODO: 에러 throw
+  [R.T, R.identity],
+]);
+
+const onMoveCursor = (store) => (direction) => {
+  const position = store.get().position;
+
+  const updatedPosition = updatePositionByDirection(direction)(position);
+  store.update({ position: updatedPosition });
 };
