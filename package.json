@@ -33,6 +33,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "jest": "^29.7.0",
     "prettier": "^3.2.4",
+    "rimraf": "^5.0.5",
     "rollup": "^4.9.6",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-typescript2": "^0.36.0",
@@ -40,6 +41,7 @@
   },
   "scripts": {
     "start": "node ./dist/bundle.js",
+    "pretest": "rimraf dist coverage",
     "test": "jest  --coverage",
     "build-and-test": "npm run build && npm run test",
     "build-and-start": "npm run build && npm run start",
