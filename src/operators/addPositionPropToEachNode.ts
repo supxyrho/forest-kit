@@ -8,7 +8,7 @@ const R = require("ramda");
 export const addPositionPropToEachNode = R.curry(
   <TNode>(
     ops: TOperatorSettings,
-    positionKey: string = "position",
+    positionKey: string,
     nodes: TNode[]
   ): TNode[] => {
     const store = Store({
