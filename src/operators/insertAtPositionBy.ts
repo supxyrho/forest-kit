@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import { type TOperatorSettings } from "../_internal/type";
 import { addPositionPropToEachNode } from "./addPositionPropToEachNode";
-import { findOneBy } from "./findOneBy";
 import { insertFromParentBy } from "./insertFromParentBy";
 import { removePropToEachNode } from "./removePropToEachNode";
 
