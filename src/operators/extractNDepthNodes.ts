@@ -1,5 +1,7 @@
 import { deepFlatten } from "./deepFlatten";
 
+import { countChar } from "../_internal/string";
+
 import { type TOperatorSettings } from "../_internal/type";
 import { addPositionPropToEachNode } from "./addPositionPropToEachNode";
 import { removePropToEachNode } from "./removePropToEachNode";
@@ -12,11 +14,6 @@ export const extractNDepthNodes = R.curry(
       addPositionPropToEachNode(ops, "position"),
       deepFlatten(ops),
       R.filter(R.pipe(R.prop("position"), countChar("."), R.equals(n))),
-      removePropToEachNode(ops, "position"),
-    )(nodes),
-);
-
-// @TODO : internal 폴더로 분리
-const countChar = R.curry((char, str) =>
-  R.pipe(R.split(""), R.filter(R.equals(char)), R.length)(str),
+      removePropToEachNode(ops, "position")
+    )(nodes)
 );
