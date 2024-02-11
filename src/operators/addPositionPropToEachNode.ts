@@ -3,6 +3,8 @@ import { map } from "./map";
 import { type TOperatorSettings } from "../_internal/type";
 import { Store } from "../_internal/store";
 
+import { MOVE_DOWN, MOVE_NEXT, MOVE_UP } from "../_internal/constants";
+
 const R = require("ramda");
 
 export const addPositionPropToEachNode = R.curry(
@@ -27,11 +29,6 @@ export const addPositionPropToEachNode = R.curry(
     );
   }
 );
-
-// @TODO: 추후 Symnbol로 변경
-const MOVE_NEXT = "next";
-const MOVE_DOWN = "down";
-const MOVE_UP = "up";
 
 const moveNext = (postion) =>
   R.converge(R.append, [R.pipe(R.last, R.inc), R.init])(postion);
