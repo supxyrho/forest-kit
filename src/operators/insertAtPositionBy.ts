@@ -5,6 +5,8 @@ import { findOneBy } from "./findOneBy";
 import { insertFromParentBy } from "./insertFromParentBy";
 import { removePropToEachNode } from "./removePropToEachNode";
 
+import { atType } from "../_internal/type";
+
 const R = require("ramda");
 
 export const insertAtPosition = R.curry(
@@ -12,7 +14,7 @@ export const insertAtPosition = R.curry(
     ops: TOperatorSettings,
     position: string,
     newNodeOrNodes: TNode | TNode[],
-    nodes: TNode[],
+    nodes: TNode[]
   ): TNode[] => {
     const nodesWithPosition = addPositionPropToEachNode(ops, "position", nodes);
 
@@ -32,14 +34,14 @@ export const insertAtPosition = R.curry(
       insertFromParentBy(
         ops,
         R.propEq(parentPosition, "position"),
-        newNodeOrNodes,
+        newNodeOrNodes
       ),
-      removePropToEachNode(ops, "position"),
+      removePropToEachNode(ops, "position")
     )(nodesWithPosition);
-  },
+  }
 );
 
-const incOrDecByDirection = (direction: string, number: number) => {
+const incOrDecByDirection = (direction: string, number: number): atType => {
   switch (direction) {
     case "left":
       if (number === 0) {
