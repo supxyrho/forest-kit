@@ -4,6 +4,7 @@
 import { hasChildren } from "./hasChildren";
 
 import { type TOperatorSettings } from "../_internal/type";
+import { MOVE_DOWN, MOVE_NEXT, MOVE_UP } from "../_internal/constants";
 
 const R = require("ramda");
 
@@ -24,22 +25,22 @@ export const traverseWithApply = R.curry(
             R.pipe(
               R.tap(
                 (el, index) =>
-                  ops?.onMoveCursor && ops?.onMoveCursor("next", el, index),
+                  ops?.onMoveCursor && ops?.onMoveCursor(MOVE_NEXT, el, index),
               ),
               transformation,
             ),
             R.ifElse(
               hasChildren(ops),
               R.pipe(
-                R.tap(() => {
-                  ops?.onMoveCursor && ops?.onMoveCursor("down");
+                R.tap((el, index) => {
+                  ops?.onMoveCursor && ops?.onMoveCursor(MOVE_DOWN, el, index);
                 }),
                 R.over(
                   R.lensProp(ops.childrenKey),
                   traverseWithApply(ops, transformation),
                 ),
-                R.tap(() => {
-                  ops?.onMoveCursor && ops?.onMoveCursor("up");
+                R.tap((el, index) => {
+                  ops?.onMoveCursor && ops?.onMoveCursor(MOVE_UP, el, index);
                 }),
               ),
               R.identity,
