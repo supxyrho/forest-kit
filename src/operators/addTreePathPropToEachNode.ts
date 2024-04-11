@@ -30,11 +30,11 @@ export const addTreePathPropToEachNode = R.curry(
     }
 );
 
-const moveNext = (currentPath, treeNode) => R.init(currentPath).concat(treeNode.name);
+const moveNext = R.curry((currentPath, nameKey, treeNode) => R.init(currentPath).concat(R.prop(nameKey, treeNode)))
 
-const moveDown = (currentPath, treeNode)=> R.append(treeNode.name, currentPath);
+const moveDown = R.curry((currentPath, nameKey, treeNode)=> R.append(R.prop(nameKey, treeNode), currentPath))
 
-const moveUp = (currentPath) => R.init(currentPath);
+const moveUp = R.curry((currentPath) => R.init(currentPath))
 
 const updatePathByDirection = R.cond([
   [R.equals(MOVE_NEXT), () => moveNext],
@@ -44,10 +44,7 @@ const updatePathByDirection = R.cond([
   [R.T, R.identity],
 ]);
 
-const handleCursorMovement = (store, nameKey) => (direction, treeNode) => {
-  const currentTreePath = store.get().currentTreePath;
-
-  const nextTreePath = updatePathByDirection(direction)(currentTreePath, treeNode);
-
-  store.update({ currentTreePath: nextTreePath });
-};
+const handleCursorMovement = (store, nameKey) => (direction, treeNode) => 
+  store.update({ 
+    currentTreePath: updatePathByDirection(direction)(store.get().currentTreePath, nameKey, treeNode)
+  });
