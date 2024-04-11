@@ -1,8 +1,8 @@
 import { describe, expect, test } from "@jest/globals";
 
-import { addTreePathPropToEachNode } from "../operators/addPathToEachNode";
+import { addTreePathPropToEachNode } from "../operators/addTreePathPropToEachNode";
 
-describe("addPathToEachNode", () => {
+describe("addTreePathPropToEachNode", () => {
   test("각각의 노드에 대해서, 트리 경로를 부여한다.", () => {
     const originalNodes = [
       {
