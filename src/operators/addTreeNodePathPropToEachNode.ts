@@ -7,7 +7,7 @@ import { MOVE_DOWN, MOVE_NEXT, MOVE_UP } from "../_internal/constants";
 
 const R = require("ramda");
 
-export const addTreePathPropToEachNode = R.curry(
+export const addTreeNodePathPropToEachNode = R.curry(
   <TNode>(
     ops: TOperatorSettings,
     treeNodePathKey: string,

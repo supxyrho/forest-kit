@@ -1,8 +1,8 @@
 import { describe, expect, test } from "@jest/globals";
 
-import { addTreePathPropToEachNode } from "../operators/addTreePathPropToEachNode";
+import { addTreeNodePathPropToEachNode } from "../operators/addTreeNodePathPropToEachNode";
 
-describe("addTreePathPropToEachNode", () => {
+describe("addTreeNodePathPropToEachNode", () => {
   test("각각의 노드에 대해서, 트리 경로를 부여한다.", () => {
     const originalNodes = [
       {
@@ -85,7 +85,7 @@ describe("addTreePathPropToEachNode", () => {
     ];
 
     const ops = { childrenKey: "children" };
-    expect(addTreePathPropToEachNode(ops, "treePath", "name", "/", originalNodes)).toEqual(
+    expect(addTreeNodePathPropToEachNode(ops, "treePath", "name", "/", originalNodes)).toEqual(
       expectedNodes,
     );
   });
