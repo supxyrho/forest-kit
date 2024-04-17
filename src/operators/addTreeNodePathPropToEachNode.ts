@@ -23,17 +23,17 @@ export const addTreeNodePathPropToEachNode = R.curry(
         ...ops,
         onMoveCursor: handleCursorMovement(store, nameKey),
       },
-      assocTreeNodePathProp(treeNodePathKey, joinSeparator, store),
+      assocTreeNodePathProp(joinSeparator, treeNodePathKey, store.get().currentTreeNodePath),
       nodes
     );
   }
 );
 
 const assocTreeNodePathProp = R.curry(
-  (treeNodePathKey, joinSeparator, store, treeNode) =>
+  (joinSeparator, treeNodePathKey,  treeNodePath, treeNode) =>
     R.assoc(
       treeNodePathKey,
-      R.join(joinSeparator, store.get().currentTreeNodePath),
+      R.join(joinSeparator, treeNodePath),
       treeNode
     )
 );
@@ -48,7 +48,7 @@ const moveDown = R.curry((currentPath, nameKey, treeNode) =>
 
 const moveUp = R.curry((currentPath) => R.init(currentPath));
 
-const updatePathByDirection = R.cond([
+const updateTreeeNodePathPropByDirection = R.cond([
   [R.equals(MOVE_NEXT), () => moveNext],
   [R.equals(MOVE_DOWN), () => moveDown],
   [R.equals(MOVE_UP), () => moveUp],
@@ -56,7 +56,7 @@ const updatePathByDirection = R.cond([
 
 const handleCursorMovement = (store, nameKey) => (direction, treeNode) =>
   store.update({
-    currentTreeNodePath: updatePathByDirection(direction)(
+    currentTreeNodePath: updateTreeeNodePathPropByDirection(direction)(
       store.get().currentTreeNodePath,
       nameKey,
       treeNode
