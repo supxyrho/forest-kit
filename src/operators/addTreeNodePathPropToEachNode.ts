@@ -11,7 +11,7 @@ export const addTreeNodePathPropToEachNode = R.curry(
   <TNode>(
     ops: TOperatorSettings,
     treeNodePathKey: string,
-    treeNodeNameKeyKey: string,
+    treeNodeNameKey: string,
     joinSeparator: string,
     nodes: TNode[]
   ): TNode[] => {
@@ -29,11 +29,9 @@ export const addTreeNodePathPropToEachNode = R.curry(
           ...ops,
           onMoveCursor: (direction, treeNode)=>
             R.pipe(
-                R.prop(treeNodeNameKeyKey),
-                (treeNodeName) => {
-                  return cursorMovementHandlerMapper(direction)(store.get().currentPathArr, treeNodeName)
-                },
-                updateCurrentPathArrInStore(store)
+                R.prop(treeNodeNameKey),
+                (treeNodeName)=> cursorMovementHandlerMapper(direction)(store.get().currentPathArr,treeNodeName),
+                updatePathArrInStore(store)
             )(treeNode),
         },
         transformNode,
@@ -48,8 +46,8 @@ const cursorMovementHandlerMapper =
     [R.equals(MOVE_UP), () => moveUp],
   ])
 
-const moveNext = R.curry((treeNodePathArr, treeNodeName) => R.init(treeNodePathArr).concat(treeNodeName));
-const moveDown = R.curry((treeNodePathArr, treeNodeName)=> R.append(treeNodeName, treeNodePathArr));
-const moveUp = R.curry((treeNodePathArr) => R.init(treeNodePathArr));
+const moveNext = R.curry((pathArr, treeNodeName) => R.init(pathArr).concat(treeNodeName));
+const moveDown = R.curry((pathArr, treeNodeName)=> R.append(treeNodeName, pathArr));
+const moveUp = R.curry((pathArr) => R.init(pathArr));
 
-const updateCurrentPathArrInStore = R.curry((store, nextPathArr) => store.update({ currentPathArr: nextPathArr }));
+const updatePathArrInStore = R.curry((store, nextPathArr) => store.update({ currentPathArr: nextPathArr }));
