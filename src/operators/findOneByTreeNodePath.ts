@@ -6,7 +6,7 @@ import { findOneBy } from "./findOneBy";
 
 const R = require("ramda");
 
-export const findTreeNodeByTreeNodePath = R.curry(
+export const findOneByTreeNodePath = R.curry(
   <TNode>(
     ops: TOperatorSettings,
     targetTreeNodePath: string,

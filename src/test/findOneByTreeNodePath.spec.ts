@@ -1,8 +1,8 @@
 import { describe, expect, test } from "@jest/globals";
 
-import { findTreeNodeByTreeNodePath } from "../operators/findTreeNodeByTreeNodePath";
+import { findOneByTreeNodePath } from "../operators/findOneByTreeNodePath";
 
-describe("findTreeNodeByTreeNodePath", () => {
+describe("findOneByTreeNodePath", () => {
   test("주어진 트리 경로와 일치하는 트리를 탐색하여 반환한다.", () => {
     const originalNodes = [
       {
@@ -60,7 +60,7 @@ describe("findTreeNodeByTreeNodePath", () => {
 
     const ops = { childrenKey: "children" };
     expect(
-      findTreeNodeByTreeNodePath(ops, "1/1-1/1-1-1", "name", originalNodes)
+      findOneByTreeNodePath(ops, "1/1-1/1-1-1", "name", originalNodes)
     ).toEqual(expectedNodes);
   });
 });
