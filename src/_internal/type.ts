@@ -5,6 +5,8 @@ interface TOperatorConfig {
   applyTimesBoundary: [number | string, number | string];
   at?: atType;
   onMoveCursor?: (direction: string, el?: unknown, index?: number) => void;
+  onBeforeNodeVisit?: (treeNode: unknown, args: unknown) => void;
+  onAfterApply?: (treeNode: unknown, args: unknown) => void;
 }
 
 export type { TOperatorConfig, atType };
