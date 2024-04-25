@@ -3,21 +3,21 @@ import { mapBy } from "./mapBy";
 
 import { Store } from "../_internal/store";
 
-import { type TOperatorSettings } from "../_internal/type";
+import { type TOperatorConfig } from "../_internal/type";
 import { isNonArrayTypeObject } from "../_internal/typeCheck";
 
 const R = require("ramda");
 
 export const insertFromParentBy = R.curry(
   <TNode>(
-    ops: TOperatorSettings,
+    opc: TOperatorConfig,
     predicate: (node: TNode) => boolean,
     newNodeOrNodes: TNode | TNode[],
     nodes: TNode[],
   ): TNode[] => {
     const store = Store({ isInserted: false });
     const result = mapBy(
-      ops,
+      opc,
       predicate,
       R.ifElse(
         () => R.equals(false, store.get().isInserted),
@@ -26,8 +26,8 @@ export const insertFromParentBy = R.curry(
             store.update({ isInserted: true });
           }),
           R.over(
-            R.lensProp(ops.childrenKey),
-            insertAt(ops?.at ?? "last", newNodeOrNodes),
+            R.lensProp(opc.childrenKey),
+            insertAt(opc?.at ?? "last", newNodeOrNodes),
           ),
         ),
         R.identity,

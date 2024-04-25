@@ -45,8 +45,8 @@ describe("reduce", () => {
       { name: "1-3", value: 12, children: [] },
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     const reducer= (acc, treeNode) => acc + treeNode.value;
-    expect(reduce(ops, reducer, 0, originalNodes)).toEqual(78);
+    expect(reduce(opc, reducer, 0, originalNodes)).toEqual(78);
   });
 });

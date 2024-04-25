@@ -52,7 +52,7 @@ describe("extractNDepthNodes", () => {
       { name: "1-2-1-2", children: [] },
     ];
 
-    const ops = { childrenKey };
-    expect(extractNDepthNodes(ops, 2, originalNodes)).toEqual(expectedNodes);
+    const opc = { childrenKey };
+    expect(extractNDepthNodes(opc, 2, originalNodes)).toEqual(expectedNodes);
   });
 });

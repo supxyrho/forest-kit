@@ -40,9 +40,9 @@ describe("filter", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     const filterFunction = () => false;
-    expect(filter(ops, filterFunction, originalNodes)).toEqual([]);
+    expect(filter(opc, filterFunction, originalNodes)).toEqual([]);
   });
 
   test("특정 조건의 단말 노드를 필터 처리한다", () => {
@@ -117,10 +117,10 @@ describe("filter", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     const filterFunction = (node) =>
       !["1-1-1-1", "1-2-1-1", "1-2-2"].includes(node.name);
-    expect(filter(ops, filterFunction, originalNodes)).toEqual(expectedNodes);
+    expect(filter(opc, filterFunction, originalNodes)).toEqual(expectedNodes);
   });
 
   test("특정 조건의 중간 노드를 필터 처리한다", () => {
@@ -189,9 +189,9 @@ describe("filter", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     const filterFunction = (node) => !["1-1", "1-2-2"].includes(node.name);
-    expect(filter(ops, filterFunction, originalNodes)).toEqual(expectedNodes);
+    expect(filter(opc, filterFunction, originalNodes)).toEqual(expectedNodes);
   });
 
   test("특정 조건의 중간 노드를 필터 처리한다", () => {
@@ -258,16 +258,16 @@ describe("filter", () => {
       // {name: '1-3', children: []},
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     const filterFunction = (node) => !["1", "1-3"].includes(node.name);
-    expect(filter(ops, filterFunction, originalNodes)).toEqual(expectedNodes);
+    expect(filter(opc, filterFunction, originalNodes)).toEqual(expectedNodes);
   });
 
   test("빈 배열인 경우, 빈 배열을 반환한다.", () => {
     const originalNodes = [];
 
-    const ops = { childrenKey: "children" };
+    const opc = { childrenKey: "children" };
     const filterFunction = () => true;
-    expect(filter(ops, filterFunction, originalNodes)).toEqual([]);
+    expect(filter(opc, filterFunction, originalNodes)).toEqual([]);
   });
 });

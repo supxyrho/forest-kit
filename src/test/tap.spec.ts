@@ -47,9 +47,9 @@ describe("tap", () => {
       { name: "1-3", newKey: "newValue", children: [] },
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     const callback = jest.fn(R.identity);
-    tap(ops, callback, originalNodes);
+    tap(opc, callback, originalNodes);
     expect(callback).toHaveBeenCalledTimes(12);
   });
 });

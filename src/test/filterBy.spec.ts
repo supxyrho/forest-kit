@@ -41,11 +41,11 @@ describe("filterBy", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = {
+    const opc = {
       childrenKey: "children",
       applyTimesBoundary: [0, 0],
     };
-    expect(() => filterBy(ops, () => true, originalNodes)).toThrow();
+    expect(() => filterBy(opc, () => true, originalNodes)).toThrow();
   });
 
   test("최대 filter 적용 횟수가 1인 경우, 최대 1번만 특정 조건을 만족하는 node에 적용된다. ", () => {
@@ -119,13 +119,13 @@ describe("filterBy", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = {
+    const opc = {
       childrenKey: "children",
       applyTimesBoundary: [0, 1],
     };
     const predicate = (node) =>
       ["1-1-1-1", "1-1-1-2", "1-2-1-1", "1-2-1-2"].includes(node.name);
-    expect(filterBy(ops, predicate, originalNodes)).toEqual(expectedNodes);
+    expect(filterBy(opc, predicate, originalNodes)).toEqual(expectedNodes);
   });
 
   test("최소 filter 적용 횟수가 100인 경우, 실제 map 적용횟수가 미달일 시, error를 throw한다. ", () => {
@@ -164,12 +164,12 @@ describe("filterBy", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = {
+    const opc = {
       childrenKey: "children",
       applyTimesBoundary: [100, Infinity],
     };
     const predicate = (node) =>
       ["1-1-1-1", "1-1-1-2", "1-2-1-1", "1-2-1-2"].includes(node.name);
-    expect(() => filterBy(ops, predicate, originalNodes)).toThrow();
+    expect(() => filterBy(opc, predicate, originalNodes)).toThrow();
   });
 });

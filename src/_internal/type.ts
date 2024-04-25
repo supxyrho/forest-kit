@@ -1,10 +1,10 @@
 type atType = "left" | "right" | number;
 
-interface TOperatorSettings {
+interface TOperatorConfig {
   childrenKey: string;
   applyTimesBoundary: [number | string, number | string];
   at?: atType;
   onMoveCursor?: (direction: string, el?: unknown, index?: number) => void;
 }
 
-export type { TOperatorSettings, atType };
+export type { TOperatorConfig, atType };

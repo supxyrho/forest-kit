@@ -1,21 +1,21 @@
-import { type TOperatorSettings } from "../_internal/type";
+import { type TOperatorConfig } from "../_internal/type";
 
 import { mapBy } from "./mapBy";
 
 const R = require("ramda");
 
 // @TODO: applyTimesBoundary 대신 maxApplyTimes, minApplyTimes 로 변경
-const defaultOps: TOperatorSettings = {
+const defaultOps: TOperatorConfig = {
   childrenKey: "children",
   applyTimesBoundary: [0, Infinity],
 };
 
 export const mapManyBy = R.curry(
   <TNode>(
-    ops: TOperatorSettings,
+    opc: TOperatorConfig,
     predicate: (node: TNode) => boolean,
     transformation: (node: TNode) => TNode,
     nodes: TNode[],
   ): TNode[] =>
-    mapBy({ ...defaultOps, ...ops }, predicate, transformation, nodes),
+    mapBy({ ...defaultOps, ...opc }, predicate, transformation, nodes),
 );

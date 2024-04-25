@@ -44,8 +44,8 @@ describe("every", () => {
 
     const condition = (node) => node.name === "not exist";
 
-    const ops = { childrenKey };
-    expect(every(ops, condition, originalNodes)).toEqual(false);
+    const opc = { childrenKey };
+    expect(every(opc, condition, originalNodes)).toEqual(false);
   });
 
   test("모든 노드가 특정 조건을 만족하면, true를 반환한다.", () => {
@@ -85,8 +85,8 @@ describe("every", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     const condition = R.is(Object);
-    expect(every(ops, condition, originalNodes)).toEqual(true);
+    expect(every(opc, condition, originalNodes)).toEqual(true);
   });
 });

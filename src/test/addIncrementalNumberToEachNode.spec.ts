@@ -79,9 +79,9 @@ describe("addSequencePropEachNode", () => {
       { name: "1-3", seq: 12, children: [] },
     ];
 
-    const ops = { childrenKey: "children" };
+    const opc = { childrenKey: "children" };
     expect(
-      addIncrementalNumberToEachNode(ops, 0, "seq", originalNodes),
+      addIncrementalNumberToEachNode(opc, 0, "seq", originalNodes),
     ).toEqual(expectedNodes);
   });
 });

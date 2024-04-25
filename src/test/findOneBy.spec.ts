@@ -43,12 +43,12 @@ describe("findOneBy", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = {
+    const opc = {
       childrenKey,
     };
     const predicate = (node) =>
       ["1", "1-1", "1-1-1", "1-1-1-1"].includes(node.name);
     const expectedNode = expect.objectContaining({ name: "1" });
-    expect(findOneBy(ops, predicate, originalNodes)).toEqual(expectedNode);
+    expect(findOneBy(opc, predicate, originalNodes)).toEqual(expectedNode);
   });
 });

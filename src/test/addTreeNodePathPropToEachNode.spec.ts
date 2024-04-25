@@ -88,9 +88,9 @@ describe("addTreeNodePathPropToEachNode", () => {
       { name: "3", treePath: "3", children: [] },
     ];
 
-    const ops = { childrenKey: "children" };
+    const opc = { childrenKey: "children" };
     expect(
-      addTreeNodePathPropToEachNode(ops, "treePath", "name", "/", originalNodes)
+      addTreeNodePathPropToEachNode(opc, "treePath", "name", "/", originalNodes)
     ).toEqual(expectedNodes);
   });
 });

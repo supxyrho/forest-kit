@@ -56,31 +56,31 @@ describe("deepFlatten", () => {
       expect.objectContaining({ name: "1-3" }),
     ];
 
-    const ops = { childrenKey };
-    expect(deepFlatten(ops, originalNodes)).toEqual(expectedNodes);
+    const opc = { childrenKey };
+    expect(deepFlatten(opc, originalNodes)).toEqual(expectedNodes);
   });
 
   test("빈 배열인 경우, 빈 배열을 반환한다.", () => {
     const childrenKey = "children";
     const originalNodes = [];
 
-    const ops = { childrenKey };
-    expect(deepFlatten(ops, originalNodes)).toEqual([]);
+    const opc = { childrenKey };
+    expect(deepFlatten(opc, originalNodes)).toEqual([]);
   });
 
   test("배열 타입이 아닌 경우, error를 throw한다", () => {
     const childrenKey = "children";
     const originalNodes = `Invalid node type`;
 
-    const ops = { childrenKey };
-    expect(() => deepFlatten(ops, originalNodes)).toThrow();
+    const opc = { childrenKey };
+    expect(() => deepFlatten(opc, originalNodes)).toThrow();
   });
 
   test("자식 prop이 존재하지 않는 경우, error를 throw한다.", () => {
     const childrenKey = "children";
     const originalNodes = [{}];
 
-    const ops = { childrenKey };
-    expect(() => deepFlatten(ops, originalNodes)).toThrow();
+    const opc = { childrenKey };
+    expect(() => deepFlatten(opc, originalNodes)).toThrow();
   });
 });

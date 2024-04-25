@@ -2,13 +2,13 @@ import { map } from "./map";
 
 import { createNumberIncrementer } from "../_internal/createNumberIncrementer";
 
-import { type TOperatorSettings } from "../_internal/type";
+import { type TOperatorConfig } from "../_internal/type";
 
 const R = require("ramda");
 
 export const addIncrementalNumberToEachNode = R.curry(
   <TNode>(
-    ops: TOperatorSettings,
+    opc: TOperatorConfig,
     start: number,
     sequenceKey: string,
     nodes: TNode[],
@@ -16,7 +16,7 @@ export const addIncrementalNumberToEachNode = R.curry(
     const numberIncrementer = createNumberIncrementer(start);
 
     return map(
-      ops,
+      opc,
       (el) => R.assoc(sequenceKey, numberIncrementer.next())(el),
       nodes,
     );

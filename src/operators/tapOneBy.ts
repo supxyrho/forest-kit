@@ -1,20 +1,20 @@
-import { type TOperatorSettings } from "../_internal/type";
+import { type TOperatorConfig } from "../_internal/type";
 
 import { tapBy } from "./tapBy";
 
 const R = require("ramda");
 
 // @TODO: applyTimesBoundary 대신 maxApplyTimes, minApplyTimes 로 변경
-const defaultOps: TOperatorSettings = {
+const defaultOps: TOperatorConfig = {
   childrenKey: "children",
   applyTimesBoundary: [0, 1],
 };
 
 export const tapOneBy = R.curry(
   <TNode>(
-    ops: TOperatorSettings,
+    opc: TOperatorConfig,
     predicate: (node: TNode) => boolean,
     tapFn: (node: TNode) => void,
     nodes: TNode[],
-  ): TNode[] => tapBy({ ...defaultOps, ...ops }, predicate, tapFn, nodes),
+  ): TNode[] => tapBy({ ...defaultOps, ...opc }, predicate, tapFn, nodes),
 );

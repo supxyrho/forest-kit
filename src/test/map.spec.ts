@@ -79,18 +79,18 @@ describe("map", () => {
       { name: "1-3", newKey: "newValue", children: [] },
     ];
 
-    const ops = { childrenKey: "children" };
+    const opc = { childrenKey: "children" };
     const mapFunction = (node) => ({ ...node, newKey: "newValue" });
-    expect(map(ops, mapFunction, originalNodes)).toEqual(expectedNodes);
+    expect(map(opc, mapFunction, originalNodes)).toEqual(expectedNodes);
   });
 
   test("빈 배열인 경우, 빈 배열을 반환한다.", () => {
-    const ops = { childrenKey: "children" };
-    expect(map(ops, () => "newValue", [])).toEqual([]);
+    const opc = { childrenKey: "children" };
+    expect(map(opc, () => "newValue", [])).toEqual([]);
   });
 
   test("undefined인 경우, error를 throw한다.", () => {
-    const ops = { childrenKey: "children" };
-    expect(() => map(ops, () => "newValue", undefined)).toThrow();
+    const opc = { childrenKey: "children" };
+    expect(() => map(opc, () => "newValue", undefined)).toThrow();
   });
 });

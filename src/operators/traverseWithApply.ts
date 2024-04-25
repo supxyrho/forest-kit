@@ -3,14 +3,14 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import { hasChildren } from "./hasChildren";
 
-import { type TOperatorSettings } from "../_internal/type";
+import { type TOperatorConfig } from "../_internal/type";
 import { MOVE_DOWN, MOVE_NEXT, MOVE_UP } from "../_internal/constants";
 
 const R = require("ramda");
 
 export const traverseWithApply = R.curry(
   <TNode>(
-    ops: TOperatorSettings,
+    opc: TOperatorConfig,
     transformation: (node: TNode) => void,
     nodes: TNode[],
   ): TNode[] =>
@@ -25,22 +25,22 @@ export const traverseWithApply = R.curry(
             R.pipe(
               R.tap(
                 (el, index) =>
-                  ops?.onMoveCursor && ops?.onMoveCursor(MOVE_NEXT, el, index),
+                  opc?.onMoveCursor && opc?.onMoveCursor(MOVE_NEXT, el, index),
               ),
               transformation,
             ),
             R.ifElse(
-              hasChildren(ops),
+              hasChildren(opc),
               R.pipe(
                 R.tap((el, index) => {
-                  ops?.onMoveCursor && ops?.onMoveCursor(MOVE_DOWN, el, index);
+                  opc?.onMoveCursor && opc?.onMoveCursor(MOVE_DOWN, el, index);
                 }),
                 R.over(
-                  R.lensProp(ops.childrenKey),
-                  traverseWithApply(ops, transformation),
+                  R.lensProp(opc.childrenKey),
+                  traverseWithApply(opc, transformation),
                 ),
                 R.tap((el, index) => {
-                  ops?.onMoveCursor && ops?.onMoveCursor(MOVE_UP, el, index);
+                  opc?.onMoveCursor && opc?.onMoveCursor(MOVE_UP, el, index);
                 }),
               ),
               R.identity,

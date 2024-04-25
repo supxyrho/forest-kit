@@ -42,8 +42,8 @@ describe("someOnLeafNodes", () => {
 
     const condition = (node) => node.name === "not exist";
 
-    const ops = { childrenKey };
-    expect(someOnLeafNodes(ops, condition, originalNodes)).toEqual(false);
+    const opc = { childrenKey };
+    expect(someOnLeafNodes(opc, condition, originalNodes)).toEqual(false);
   });
 
   test("1 depth 내 특정 조건의 단말 노드가 존재하면, true를 반환한다.", () => {
@@ -83,9 +83,9 @@ describe("someOnLeafNodes", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     const condition = (node) => node.name === "1-3";
-    expect(someOnLeafNodes(ops, condition, originalNodes)).toEqual(true);
+    expect(someOnLeafNodes(opc, condition, originalNodes)).toEqual(true);
   });
 
   test("1depth 보다 큰 특정 조건의 단말 노드가 존재하면, true를 반환한다.", () => {
@@ -108,8 +108,8 @@ describe("someOnLeafNodes", () => {
       { name: "3", children: [] },
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     const condition = (node) => node.name === "2-1-2";
-    expect(someOnLeafNodes(ops, condition, originalNodes)).toEqual(true);
+    expect(someOnLeafNodes(opc, condition, originalNodes)).toEqual(true);
   });
 });

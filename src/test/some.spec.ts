@@ -42,8 +42,8 @@ describe("some", () => {
 
     const condition = (node) => node.name === "not exist";
 
-    const ops = { childrenKey };
-    expect(some(ops, condition, originalNodes)).toEqual(false);
+    const opc = { childrenKey };
+    expect(some(opc, condition, originalNodes)).toEqual(false);
   });
 
   test("특정 노드가 조건을 만족하면, true를 반환한다.", () => {
@@ -66,8 +66,8 @@ describe("some", () => {
       { name: "3", children: [] },
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     const condition = (node) => node.name === "2-1-2";
-    expect(some(ops, condition, originalNodes)).toEqual(true);
+    expect(some(opc, condition, originalNodes)).toEqual(true);
   });
 });

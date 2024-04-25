@@ -1,18 +1,18 @@
-import { type TOperatorSettings } from "../_internal/type";
+import { type TOperatorConfig } from "../_internal/type";
 
 import { filterBy } from "./filterBy";
 
 const R = require("ramda");
 
-const defaultOps: TOperatorSettings = {
+const defaultOps: TOperatorConfig = {
   childrenKey: "children",
   applyTimesBoundary: [0, Infinity],
 };
 
 export const filterManyBy = R.curry(
   <TNode>(
-    ops: TOperatorSettings,
+    opc: TOperatorConfig,
     predicate: (node: TNode) => boolean,
     nodes: TNode[],
-  ): TNode[] => filterBy({ ...defaultOps, ...ops }, predicate, nodes),
+  ): TNode[] => filterBy({ ...defaultOps, ...opc }, predicate, nodes),
 );

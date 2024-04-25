@@ -80,14 +80,14 @@ describe("removePropToEachNode", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = { childrenKey };
-    expect(removePropToEachNode(ops, "seq", originalNodes)).toEqual(
+    const opc = { childrenKey };
+    expect(removePropToEachNode(opc, "seq", originalNodes)).toEqual(
       expectedNodes,
     );
   });
 
   test("빈 배열인 경우, 빈 배열을 반환한다.", () => {
-    const ops = { childrenKey: "children" };
-    expect(removePropToEachNode(ops, "seq", [])).toEqual([]);
+    const opc = { childrenKey: "children" };
+    expect(removePropToEachNode(opc, "seq", [])).toEqual([]);
   });
 });

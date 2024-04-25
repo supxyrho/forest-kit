@@ -50,13 +50,13 @@ describe("extractLeafNodes", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = { childrenKey };
-    expect(extractLeafNodes(ops, originalNodes)).toEqual(expectedNodes);
+    const opc = { childrenKey };
+    expect(extractLeafNodes(opc, originalNodes)).toEqual(expectedNodes);
   });
 
   test("빈 배열인 경우, 빈 배열을 반환한다.", () => {
     const childrenKey = "children";
-    const ops = { childrenKey };
-    expect(extractLeafNodes(ops, [])).toEqual([]);
+    const opc = { childrenKey };
+    expect(extractLeafNodes(opc, [])).toEqual([]);
   });
 });

@@ -1,13 +1,13 @@
 import { traverseWithApply } from "./traverseWithApply";
 
-import { type TOperatorSettings } from "../_internal/type";
+import { type TOperatorConfig } from "../_internal/type";
 
 const R = require("ramda");
 
 export const map = R.curry(
   <TNode>(
-    ops: TOperatorSettings,
+    opc: TOperatorConfig,
     transformation: (node: TNode) => TNode,
     nodes: TNode[],
-  ): TNode[] => traverseWithApply(ops, transformation, nodes),
+  ): TNode[] => traverseWithApply(opc, transformation, nodes),
 );

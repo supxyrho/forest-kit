@@ -67,9 +67,9 @@ describe("filter", () => {
       // {name: '1-3', children: []},
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     const filterFunction = (node) => ["1", "1-3"].includes(node.name);
-    expect(filterManyBy(ops, filterFunction, originalNodes)).toEqual(
+    expect(filterManyBy(opc, filterFunction, originalNodes)).toEqual(
       expectedNodes,
     );
   });

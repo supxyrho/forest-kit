@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
-import { type TOperatorSettings } from "../_internal/type";
+import { type TOperatorConfig } from "../_internal/type";
 import { addPositionPropToEachNode } from "./addPositionPropToEachNode";
 import { findOneBy } from "./findOneBy";
 import { insertFromParentBy } from "./insertFromParentBy";
@@ -9,31 +9,31 @@ const R = require("ramda");
 
 export const insertBesideSiblingBy = R.curry(
   <TNode>(
-    ops: TOperatorSettings,
+    opc: TOperatorConfig,
     predicate: (node: TNode) => boolean,
     newNodeOrNodes: TNode | TNode[],
     nodes: TNode[],
   ): TNode[] => {
-    const nodesWithPosition = addPositionPropToEachNode(ops, "position", nodes);
+    const nodesWithPosition = addPositionPropToEachNode(opc, "position", nodes);
 
     // @TODO: apply FP (functor or monad)
-    const sibling = findOneBy(ops, predicate, nodesWithPosition);
+    const sibling = findOneBy(opc, predicate, nodesWithPosition);
     const tmp = sibling.position.split(".");
     const siblingIdx = Number(tmp.pop() - 1);
     const parentPosition = tmp.join(".");
 
-    ops = {
-      ...ops,
-      at: incOrDecByDirection(String(ops?.at ?? "right"), siblingIdx),
+    opc = {
+      ...opc,
+      at: incOrDecByDirection(String(opc?.at ?? "right"), siblingIdx),
     };
 
     return R.pipe(
       insertFromParentBy(
-        ops,
+        opc,
         R.propEq(parentPosition, "position"),
         newNodeOrNodes,
       ),
-      removePropToEachNode(ops, "position"),
+      removePropToEachNode(opc, "position"),
     )(nodesWithPosition);
   },
 );

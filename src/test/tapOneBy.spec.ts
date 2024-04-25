@@ -42,13 +42,13 @@ describe("tapOneBy", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = {
+    const opc = {
       childrenKey: "children",
       applyTimesBoundary: [0, 1],
     };
     const predicate = (node) => ["1-1"].includes(node.name);
     const callback = jest.fn(R.identity);
-    tapOneBy(ops, predicate, callback, originalNodes);
+    tapOneBy(opc, predicate, callback, originalNodes);
     expect(callback).toHaveBeenCalledTimes(1);
   });
 });

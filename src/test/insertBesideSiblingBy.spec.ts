@@ -79,7 +79,7 @@ describe("insertBesideSiblingBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         // at 기본값이 right  
       };
@@ -87,7 +87,7 @@ describe("insertBesideSiblingBy", () => {
       const newNode = { name: "newNode", children: [] };
 
       expect(
-        insertBesideSiblingBy(ops, predicate, newNode, originalNodes),
+        insertBesideSiblingBy(opc, predicate, newNode, originalNodes),
       ).toEqual(expectedNodes);
     });
 
@@ -164,7 +164,7 @@ describe("insertBesideSiblingBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         at: "left",
       };
@@ -172,7 +172,7 @@ describe("insertBesideSiblingBy", () => {
       const newNode = { name: "newNode", children: [] };
 
       expect(
-        insertBesideSiblingBy(ops, predicate, newNode, originalNodes),
+        insertBesideSiblingBy(opc, predicate, newNode, originalNodes),
       ).toEqual(expectedNodes);
     });
 
@@ -249,7 +249,7 @@ describe("insertBesideSiblingBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         at: "right",
       };
@@ -257,7 +257,7 @@ describe("insertBesideSiblingBy", () => {
       const newNode = { name: "newNode", children: [] };
 
       expect(
-        insertBesideSiblingBy(ops, predicate, newNode, originalNodes),
+        insertBesideSiblingBy(opc, predicate, newNode, originalNodes),
       ).toEqual(expectedNodes);
     });
   });
@@ -338,7 +338,7 @@ describe("insertBesideSiblingBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         // at 기본값이 last
       };
@@ -346,7 +346,7 @@ describe("insertBesideSiblingBy", () => {
       const newNodes = [ { name: "newNode-1", children: [] }, { name: "newNode-2", children: [] } ];
 
       expect(
-        insertBesideSiblingBy(ops, predicate, newNodes, originalNodes),
+        insertBesideSiblingBy(opc, predicate, newNodes, originalNodes),
       ).toEqual(expectedNodes);
     });
 
@@ -425,7 +425,7 @@ describe("insertBesideSiblingBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         at: "left",
       };
@@ -433,7 +433,7 @@ describe("insertBesideSiblingBy", () => {
       const newNodes = [{ name: "newNode-1", children: [] }, { name: "newNode-2", children: [] }];
 
       expect(
-        insertBesideSiblingBy(ops, predicate, newNodes, originalNodes),
+        insertBesideSiblingBy(opc, predicate, newNodes, originalNodes),
       ).toEqual(expectedNodes);
     });
 
@@ -512,7 +512,7 @@ describe("insertBesideSiblingBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         at: "right",
       };
@@ -520,7 +520,7 @@ describe("insertBesideSiblingBy", () => {
       const newNodes = [{ name: "newNode-1", children: [] }, { name: "newNode-2", children: [] }];
 
       expect(
-        insertBesideSiblingBy(ops, predicate, newNodes, originalNodes),
+        insertBesideSiblingBy(opc, predicate, newNodes, originalNodes),
       ).toEqual(expectedNodes);
     });
   })

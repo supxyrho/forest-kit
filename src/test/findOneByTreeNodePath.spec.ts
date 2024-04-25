@@ -58,9 +58,9 @@ describe("findOneByTreeNodePath", () => {
         ],
       }
 
-    const ops = { childrenKey: "children" };
+    const opc = { childrenKey: "children" };
     expect(
-      findOneByTreeNodePath(ops, "1/1-1/1-1-1", "name", originalNodes)
+      findOneByTreeNodePath(opc, "1/1-1/1-1-1", "name", originalNodes)
     ).toEqual(expectedNodes);
   });
 });

@@ -81,19 +81,19 @@ describe("mapBy", () => {
 
       const mapFunction = (node) => ({ ...node, newKey: "newValue" });
       const condition = (node) => ["1-1", "1-2-1", "1-2-2"].includes(node.name);
-      const ops = {
+      const opc = {
         childrenKey: "children",
       };
-      expect(mapBy(ops, condition, mapFunction, originalNodes)).toEqual(
+      expect(mapBy(opc, condition, mapFunction, originalNodes)).toEqual(
         expectedNodes,
       );
     });
 
     test("빈 배열인 경우, 빈 배열을 반환한다.", () => {
-      const ops = { childrenKey: "children" };
+      const opc = { childrenKey: "children" };
       expect(
         mapBy(
-          ops,
+          opc,
           () => true,
           () => "newValue",
           [],
@@ -140,13 +140,13 @@ describe("mapBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey: "children",
         applyTimesBoundary: [0, 0],
       };
       expect(() =>
         mapBy(
-          ops,
+          opc,
           () => "mock",
           () => "mock",
           originalNodes,
@@ -226,13 +226,13 @@ describe("mapBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey: "children",
         applyTimesBoundary: [0, 1],
       };
       const predicate = (node) => ["1-1"].includes(node.name);
       const mapFunction = (node) => ({ ...node, newKey: "newValue" });
-      expect(mapBy(ops, predicate, mapFunction, originalNodes)).toEqual(
+      expect(mapBy(opc, predicate, mapFunction, originalNodes)).toEqual(
         expectedNodes,
       );
     });
@@ -273,12 +273,12 @@ describe("mapBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey: "children",
         applyTimesBoundary: [5, 2],
       };
       expect(() =>
-        mapBy(ops, R.always(true), R.identity, originalNodes),
+        mapBy(opc, R.always(true), R.identity, originalNodes),
       ).toThrow();
     });
   });

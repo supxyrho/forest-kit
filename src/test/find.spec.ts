@@ -41,9 +41,9 @@ describe("find", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     const expectedNode = [expect.objectContaining({ name: "1-1" })];
-    expect(find(ops, (node) => node.name === "1-1", originalNodes)).toEqual(
+    expect(find(opc, (node) => node.name === "1-1", originalNodes)).toEqual(
       expectedNode,
     );
   });
@@ -57,9 +57,9 @@ describe("find", () => {
       { name: "3", children: [] },
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     expect(
-      find(ops, (node) => node.name === "not exist", originalNodes),
+      find(opc, (node) => node.name === "not exist", originalNodes),
     ).toEqual([]);
   });
 });

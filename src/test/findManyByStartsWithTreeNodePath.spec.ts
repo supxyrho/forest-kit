@@ -52,9 +52,9 @@ describe("findManyByStartsWithTreeNodePath", () => {
       { name: "2-1-2", treeNodePath: "2/2-1/2-1-2", children: [] },
     ];
 
-    const ops = { childrenKey: "children" };
+    const opc = { childrenKey: "children" };
     expect(
-      findManyByStartsWithTreeNodePath(ops, "2/2-1", "name", originalNodes)
+      findManyByStartsWithTreeNodePath(opc, "2/2-1", "name", originalNodes)
     ).toEqual(expectedNodes);
   });
 });

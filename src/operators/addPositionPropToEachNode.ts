@@ -1,6 +1,6 @@
 import { map } from "./map";
 
-import { type TOperatorSettings } from "../_internal/type";
+import { type TOperatorConfig } from "../_internal/type";
 import { Store } from "../_internal/store";
 
 import { MOVE_DOWN, MOVE_NEXT, MOVE_UP } from "../_internal/constants";
@@ -9,7 +9,7 @@ const R = require("ramda");
 
 export const addPositionPropToEachNode = R.curry(
   <TNode>(
-    ops: TOperatorSettings,
+    opc: TOperatorConfig,
     positionKey: string,
     nodes: TNode[]
   ): TNode[] => {
@@ -18,7 +18,7 @@ export const addPositionPropToEachNode = R.curry(
     });
 
     const defaultOps = {
-      ...ops,
+      ...opc,
       onMoveCursor: onMoveCursor(store),
     };
 

@@ -1,6 +1,6 @@
 import { map } from "./map";
 
-import { type TOperatorSettings } from "../_internal/type";
+import { type TOperatorConfig } from "../_internal/type";
 import { Store } from "../_internal/store";
 
 import { MOVE_DOWN, MOVE_NEXT, MOVE_UP } from "../_internal/constants";
@@ -9,7 +9,7 @@ const R = require("ramda");
 
 export const addTreeNodePathPropToEachNode = R.curry(
   <TNode>(
-    ops: TOperatorSettings,
+    opc: TOperatorConfig,
     treeNodePathKey: string,
     treeNodeNameKey: string,
     joinSeparator: string,
@@ -26,7 +26,7 @@ export const addTreeNodePathPropToEachNode = R.curry(
 
     return map(
         {
-          ...ops,
+          ...opc,
           onMoveCursor: (direction, treeNode)=>
             R.pipe(
                 R.prop(treeNodeNameKey),

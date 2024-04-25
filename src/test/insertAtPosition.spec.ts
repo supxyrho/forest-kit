@@ -80,14 +80,14 @@ describe("insertBesideSiblingBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey, 
       };
       const position = '1.1.1.2'
       const newNode = { name: "newNode", children: [] };
 
       expect(
-        insertAtPosition(ops, position, newNode, originalNodes),
+        insertAtPosition(opc, position, newNode, originalNodes),
       ).toEqual(expectedNodes);
     });
 
@@ -164,7 +164,7 @@ describe("insertBesideSiblingBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         at: 'left' 
       };
@@ -172,7 +172,7 @@ describe("insertBesideSiblingBy", () => {
       const newNode = { name: "newNode", children: [] };
 
       expect(
-        insertAtPosition(ops, position, newNode, originalNodes),
+        insertAtPosition(opc, position, newNode, originalNodes),
       ).toEqual(expectedNodes);
     });
 
@@ -251,7 +251,7 @@ describe("insertBesideSiblingBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         at: "right",
       };
@@ -259,7 +259,7 @@ describe("insertBesideSiblingBy", () => {
       const newNode = { name: "newNode", children: [] };
 
       expect(
-        insertAtPosition(ops, position, newNode, originalNodes),
+        insertAtPosition(opc, position, newNode, originalNodes),
       ).toEqual(expectedNodes);
     });
   });
@@ -343,14 +343,14 @@ describe("insertBesideSiblingBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
       };
       const position = '1.1.1.1'
       const newNodes = [ { name: "newNode-1", children: [] }, { name: "newNode-2", children: [] } ];
 
       expect(
-        insertAtPosition(ops, position, newNodes, originalNodes),
+        insertAtPosition(opc, position, newNodes, originalNodes),
       ).toEqual(expectedNodes);
     });
 
@@ -429,7 +429,7 @@ describe("insertBesideSiblingBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         at: "left",
       };
@@ -437,7 +437,7 @@ describe("insertBesideSiblingBy", () => {
       const newNodes = [{ name: "newNode-1", children: [] }, { name: "newNode-2", children: [] }];
 
       expect(
-        insertAtPosition(ops, position, newNodes, originalNodes),
+        insertAtPosition(opc, position, newNodes, originalNodes),
       ).toEqual(expectedNodes);
     });
 
@@ -516,7 +516,7 @@ describe("insertBesideSiblingBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         at: "right",
       };
@@ -524,7 +524,7 @@ describe("insertBesideSiblingBy", () => {
       const newNodes = [{ name: "newNode-1", children: [] }, { name: "newNode-2", children: [] }];
 
       expect(
-        insertAtPosition(ops, position, newNodes, originalNodes),
+        insertAtPosition(opc, position, newNodes, originalNodes),
       ).toEqual(expectedNodes);
     });
   })

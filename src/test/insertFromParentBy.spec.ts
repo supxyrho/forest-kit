@@ -79,7 +79,7 @@ describe("insertFromParentBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         // at 기본값이 last
       };
@@ -87,7 +87,7 @@ describe("insertFromParentBy", () => {
       const newNode = { name: "newNode", children: [] };
 
       expect(
-        insertFromParentBy(ops, predicate, newNode, originalNodes),
+        insertFromParentBy(opc, predicate, newNode, originalNodes),
       ).toEqual(expectedNodes);
     });
 
@@ -164,7 +164,7 @@ describe("insertFromParentBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         at: "first",
       };
@@ -172,7 +172,7 @@ describe("insertFromParentBy", () => {
       const newNode = { name: "newNode", children: [] };
 
       expect(
-        insertFromParentBy(ops, predicate, newNode, originalNodes),
+        insertFromParentBy(opc, predicate, newNode, originalNodes),
       ).toEqual(expectedNodes);
     });
 
@@ -190,14 +190,14 @@ describe("insertFromParentBy", () => {
         { name: "target", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
       };
       const predicate = (node) => node.name === "target";
       const newNode = { name: "newNode", children: [] };
 
       expect(
-        insertFromParentBy(ops, predicate, newNode, originalNodes),
+        insertFromParentBy(opc, predicate, newNode, originalNodes),
       ).toEqual(expectedNodes);
     });
 
@@ -274,7 +274,7 @@ describe("insertFromParentBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         at: 1
       };
@@ -282,7 +282,7 @@ describe("insertFromParentBy", () => {
       const newNode = { name: "newNode", children: [] };
 
       expect(
-        insertFromParentBy(ops, predicate, newNode, originalNodes),
+        insertFromParentBy(opc, predicate, newNode, originalNodes),
       ).toEqual(expectedNodes);
     });
 
@@ -323,7 +323,7 @@ describe("insertFromParentBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         at: Infinity
       };
@@ -331,7 +331,7 @@ describe("insertFromParentBy", () => {
       const newNode = { name: "newNode", children: [] };
 
       expect(()=> 
-        insertFromParentBy(ops, predicate, newNode, originalNodes)
+        insertFromParentBy(opc, predicate, newNode, originalNodes)
       ).toThrow();
     });
 
@@ -343,13 +343,13 @@ describe("insertFromParentBy", () => {
         { name: "non-target", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
       };
       const predicate = (node) => node.name === "target";
       const newNode = { name: "newNode", children: [] };
       expect(() =>
-        insertFromParentBy(ops, predicate, newNode, originalNodes),
+        insertFromParentBy(opc, predicate, newNode, originalNodes),
       ).toThrow();
     });
 
@@ -391,7 +391,7 @@ describe("insertFromParentBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         at: -1
       };
@@ -399,7 +399,7 @@ describe("insertFromParentBy", () => {
       const newNode = { name: "newNode", children: [] };
 
       expect(()=> 
-        insertFromParentBy(ops, predicate, newNode, originalNodes)
+        insertFromParentBy(opc, predicate, newNode, originalNodes)
       ).toThrow();
     });
 
@@ -412,13 +412,13 @@ describe("insertFromParentBy", () => {
         { name: "non-target", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
       };
       const predicate = (node) => node.name === "target";
       const newNode = { name: "newNode", children: [] };
       expect(() =>
-        insertFromParentBy(ops, predicate, newNode, originalNodes),
+        insertFromParentBy(opc, predicate, newNode, originalNodes),
       ).toThrow();
     });
   })
@@ -498,7 +498,7 @@ describe("insertFromParentBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         // at 기본값이 last
       };
@@ -506,7 +506,7 @@ describe("insertFromParentBy", () => {
       const newNodes = [ { name: "newNode-1", children: [] }, { name: "newNode-2", children: [] } ];
 
       expect(
-        insertFromParentBy(ops, predicate, newNodes, originalNodes),
+        insertFromParentBy(opc, predicate, newNodes, originalNodes),
       ).toEqual(expectedNodes);
     });
 
@@ -584,7 +584,7 @@ describe("insertFromParentBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         at: "first",
       };
@@ -592,7 +592,7 @@ describe("insertFromParentBy", () => {
       const newNodes = [{ name: "newNode-1", children: [] }, { name: "newNode-2", children: [] }];
 
       expect(
-        insertFromParentBy(ops, predicate, newNodes, originalNodes),
+        insertFromParentBy(opc, predicate, newNodes, originalNodes),
       ).toEqual(expectedNodes);
     });
 
@@ -610,14 +610,14 @@ describe("insertFromParentBy", () => {
         { name: "target", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
       };
       const predicate = (node) => node.name === "target";
       const newNodes = [{ name: "newNode-1", children: [] },{ name: "newNode-2", children: [] }];
 
       expect(
-        insertFromParentBy(ops, predicate, newNodes, originalNodes),
+        insertFromParentBy(opc, predicate, newNodes, originalNodes),
       ).toEqual(expectedNodes);
     });
 
@@ -695,7 +695,7 @@ describe("insertFromParentBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         at: 1
       };
@@ -703,7 +703,7 @@ describe("insertFromParentBy", () => {
       const newNodes = [{ name: "newNode-1", children: [] },{ name: "newNode-2", children: [] }];
 
       expect(
-        insertFromParentBy(ops, predicate, newNodes, originalNodes),
+        insertFromParentBy(opc, predicate, newNodes, originalNodes),
       ).toEqual(expectedNodes);
     });
 
@@ -744,7 +744,7 @@ describe("insertFromParentBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         at: Infinity
       };
@@ -752,7 +752,7 @@ describe("insertFromParentBy", () => {
       const newNode = { name: "newNode", children: [] };
 
       expect(()=> 
-        insertFromParentBy(ops, predicate, newNode, originalNodes)
+        insertFromParentBy(opc, predicate, newNode, originalNodes)
       ).toThrow();
     });
 
@@ -764,13 +764,13 @@ describe("insertFromParentBy", () => {
         { name: "non-target", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
       };
       const predicate = (node) => node.name === "target";
       const newNode = { name: "newNode", children: [] };
       expect(() =>
-        insertFromParentBy(ops, predicate, newNode, originalNodes),
+        insertFromParentBy(opc, predicate, newNode, originalNodes),
       ).toThrow();
     });
 
@@ -812,7 +812,7 @@ describe("insertFromParentBy", () => {
         { name: "1-3", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
         at: -1
       };
@@ -820,7 +820,7 @@ describe("insertFromParentBy", () => {
       const newNode = { name: "newNode", children: [] };
 
       expect(()=> 
-        insertFromParentBy(ops, predicate, newNode, originalNodes)
+        insertFromParentBy(opc, predicate, newNode, originalNodes)
       ).toThrow();
     });
 
@@ -833,13 +833,13 @@ describe("insertFromParentBy", () => {
         { name: "non-target", children: [] },
       ];
 
-      const ops = {
+      const opc = {
         childrenKey,
       };
       const predicate = (node) => node.name === "target";
       const newNode = { name: "newNode", children: [] };
       expect(() =>
-        insertFromParentBy(ops, predicate, newNode, originalNodes),
+        insertFromParentBy(opc, predicate, newNode, originalNodes),
       ).toThrow();
     });
   })

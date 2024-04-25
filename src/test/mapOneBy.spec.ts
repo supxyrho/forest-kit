@@ -78,13 +78,13 @@ describe("mapOnceBy", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = {
+    const opc = {
       childrenKey: "children",
       applyTimesBoundary: [0, 1],
     };
     const predicate = (node) => ["1-1"].includes(node.name);
     const mapFunction = (node) => ({ ...node, newKey: "newValue" });
-    expect(mapOneBy(ops, predicate, mapFunction, originalNodes)).toEqual(
+    expect(mapOneBy(opc, predicate, mapFunction, originalNodes)).toEqual(
       expectedNodes,
     );
   });

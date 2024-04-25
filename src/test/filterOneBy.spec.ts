@@ -61,10 +61,10 @@ describe("filterOneBy", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = {
+    const opc = {
       childrenKey: "children",
     };
     const predicate = (node) => ["1-1"].includes(node.name);
-    expect(filterOneBy(ops, predicate, originalNodes)).toEqual(expectedNodes);
+    expect(filterOneBy(opc, predicate, originalNodes)).toEqual(expectedNodes);
   });
 });

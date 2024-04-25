@@ -48,10 +48,10 @@ describe("findManyBy", () => {
       expect.objectContaining({ name: "1-1-1-2" }),
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     const predicate = (node) =>
       ["1-1-1", "1-1-1-1", "1-1-1-2"].includes(node.name);
-    expect(findManyBy(ops, predicate, originalNodes)).toEqual(expectedNodes);
+    expect(findManyBy(opc, predicate, originalNodes)).toEqual(expectedNodes);
   });
 
   test("특정 조건의 노드가 존재하지 않으면, 빈 배열을 반환한다.", () => {
@@ -92,9 +92,9 @@ describe("findManyBy", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     const predicate = (node) => ["not exist"].includes(node.name);
-    expect(findManyBy(ops, predicate, originalNodes)).toEqual([]);
+    expect(findManyBy(opc, predicate, originalNodes)).toEqual([]);
   });
 
   // @TODO: 추후 test blockName 개선
@@ -136,7 +136,7 @@ describe("findManyBy", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = {
+    const opc = {
       childrenKey,
     };
     const predicate = (node) =>
@@ -147,6 +147,6 @@ describe("findManyBy", () => {
       expect.objectContaining({ name: "1-1-1" }),
       expect.objectContaining({ name: "1-1-1-1" }),
     ];
-    expect(findManyBy(ops, predicate, originalNodes)).toEqual(expectedNodes);
+    expect(findManyBy(opc, predicate, originalNodes)).toEqual(expectedNodes);
   });
 });

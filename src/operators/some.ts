@@ -1,13 +1,13 @@
 import { deepFlatten } from "./deepFlatten";
 
-import { type TOperatorSettings } from "../_internal/type";
+import { type TOperatorConfig } from "../_internal/type";
 
 const R = require("ramda");
 
 export const some = R.curry(
   <TNode>(
-    ops: TOperatorSettings,
+    opc: TOperatorConfig,
     predicate: (node: TNode) => boolean,
     nodes: TNode[],
-  ): TNode[] => R.pipe(deepFlatten(ops), R.any(predicate))(nodes),
+  ): TNode[] => R.pipe(deepFlatten(opc), R.any(predicate))(nodes),
 );

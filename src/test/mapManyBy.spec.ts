@@ -77,12 +77,12 @@ describe("mapManyBy", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = {
+    const opc = {
       childrenKey: "children",
     };
     const predicate = (node) => ["1-1", "1-1-1", "1-1-1-1"].includes(node.name);
     const mapFunction = (node) => ({ ...node, newKey: "newValue" });
-    expect(mapManyBy(ops, predicate, mapFunction, originalNodes)).toEqual(
+    expect(mapManyBy(opc, predicate, mapFunction, originalNodes)).toEqual(
       expectedNodes,
     );
   });

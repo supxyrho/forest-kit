@@ -201,8 +201,8 @@ describe("mergeTwoTrees", () => {
       },
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
 
-    expect(mergeTwoTrees(ops, leftTree, rightTree)).toEqual(expectedTree);
+    expect(mergeTwoTrees(opc, leftTree, rightTree)).toEqual(expectedTree);
   });
 });

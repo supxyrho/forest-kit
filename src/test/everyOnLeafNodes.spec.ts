@@ -44,8 +44,8 @@ describe("everyOnLeafNodes", () => {
 
     const condition = (node) => node.name === "not exist";
 
-    const ops = { childrenKey };
-    expect(everyOnLeafNodes(ops, condition, originalNodes)).toEqual(false);
+    const opc = { childrenKey };
+    expect(everyOnLeafNodes(opc, condition, originalNodes)).toEqual(false);
   });
 
   test("모든 단말 노드가 특정 조건을 만족하면, true를 반환한다.", () => {
@@ -85,8 +85,8 @@ describe("everyOnLeafNodes", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     const condition = R.is(Object);
-    expect(everyOnLeafNodes(ops, condition, originalNodes)).toEqual(true);
+    expect(everyOnLeafNodes(opc, condition, originalNodes)).toEqual(true);
   });
 });

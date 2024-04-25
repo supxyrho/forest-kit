@@ -1,13 +1,13 @@
 import { extractLeafNodes } from "./extractLeafNodes";
 
-import { type TOperatorSettings } from "../_internal/type";
+import { type TOperatorConfig } from "../_internal/type";
 
 const R = require("ramda");
 
 export const everyOnLeafNodes = R.curry(
   <TNode>(
-    ops: TOperatorSettings,
+    opc: TOperatorConfig,
     predicate: (node: TNode) => boolean,
     nodes: TNode[],
-  ): TNode[] => R.pipe(extractLeafNodes(ops), R.all(predicate))(nodes),
+  ): TNode[] => R.pipe(extractLeafNodes(opc), R.all(predicate))(nodes),
 );

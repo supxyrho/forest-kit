@@ -84,8 +84,8 @@ describe("addPositionPropToEachNode", () => {
       { name: "3", position: "3", children: [] },
     ];
 
-    const ops = { childrenKey: "children" };
-    expect(addPositionPropToEachNode(ops, "position", originalNodes)).toEqual(
+    const opc = { childrenKey: "children" };
+    expect(addPositionPropToEachNode(opc, "position", originalNodes)).toEqual(
       expectedNodes,
     );
   });

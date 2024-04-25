@@ -3,13 +3,13 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import { filter } from "./filter";
 
-import { type TOperatorSettings } from "../_internal/type";
+import { type TOperatorConfig } from "../_internal/type";
 
 import { createCounter } from "../_internal/counter";
 
 const R = require("ramda");
 
-const defaultOps: TOperatorSettings = {
+const defaultOps: TOperatorConfig = {
   childrenKey: "children",
   applyTimesBoundary: [0, Infinity],
 };
@@ -18,12 +18,12 @@ const defaultOps: TOperatorSettings = {
 // @TODO: 에러 쓰로우 로직 또한 개별적으로 함수 합성을 통해서, 람다식만으로 해당 로직을 구현할수 있도록 하자
 export const filterBy = R.curry(
   <TNode>(
-    ops: TOperatorSettings,
+    opc: TOperatorConfig,
     predicate: (node: TNode) => boolean,
     nodes: TNode[],
   ): TNode[] => {
-    ops = { ...defaultOps, ...ops };
-    const [minApplyTimes, maxApplyTimes] = ops.applyTimesBoundary;
+    opc = { ...defaultOps, ...opc };
+    const [minApplyTimes, maxApplyTimes] = opc.applyTimesBoundary;
 
     if (R.lte(maxApplyTimes, 0)) {
       throw new Error(
@@ -33,7 +33,7 @@ export const filterBy = R.curry(
 
     const counter = createCounter();
     const result = filter(
-      ops,
+      opc,
       applyPredicateWithLimit(
         maxApplyTimes,
         counter.getCount,

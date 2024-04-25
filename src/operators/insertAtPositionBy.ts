@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
-import { type TOperatorSettings } from "../_internal/type";
+import { type TOperatorConfig } from "../_internal/type";
 import { addPositionPropToEachNode } from "./addPositionPropToEachNode";
 import { insertFromParentBy } from "./insertFromParentBy";
 import { removePropToEachNode } from "./removePropToEachNode";
@@ -10,12 +10,12 @@ const R = require("ramda");
 
 export const insertAtPosition = R.curry(
   <TNode>(
-    ops: TOperatorSettings,
+    opc: TOperatorConfig,
     position: string,
     newNodeOrNodes: TNode | TNode[],
     nodes: TNode[]
   ): TNode[] => {
-    const nodesWithPosition = addPositionPropToEachNode(ops, "position", nodes);
+    const nodesWithPosition = addPositionPropToEachNode(opc, "position", nodes);
 
     // @TODO: apply FP (functor or monad)
     const tmp = position?.split(".");
@@ -24,18 +24,18 @@ export const insertAtPosition = R.curry(
     const tmpIdx = Number(tmp?.pop() ?? 0) - 1;
     const parentPosition = tmp.join(".");
 
-    ops = {
-      ...ops,
-      at: incOrDecByDirection(String(ops?.at ?? "current"), tmpIdx),
+    opc = {
+      ...opc,
+      at: incOrDecByDirection(String(opc?.at ?? "current"), tmpIdx),
     };
 
     return R.pipe(
       insertFromParentBy(
-        ops,
+        opc,
         R.propEq(parentPosition, "position"),
         newNodeOrNodes
       ),
-      removePropToEachNode(ops, "position")
+      removePropToEachNode(opc, "position")
     )(nodesWithPosition);
   }
 );

@@ -75,9 +75,9 @@ describe("changePropNameToEachNode", () => {
       { newName: "1-3", children: [] },
     ];
 
-    const ops = { childrenKey };
+    const opc = { childrenKey };
     expect(
-      changePropNameToEachNode(ops, "name", "newName", originalNodes),
+      changePropNameToEachNode(opc, "name", "newName", originalNodes),
     ).toEqual(expectedNodes);
   });
 });

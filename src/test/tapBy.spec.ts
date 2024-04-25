@@ -42,12 +42,12 @@ describe("tapBy", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = {
+    const opc = {
       childrenKey: "children",
       applyTimesBoundary: [0, 0],
     };
 
-    expect(() => tapBy(ops, R.T, () => "nothing", originalNodes)).toThrow();
+    expect(() => tapBy(opc, R.T, () => "nothing", originalNodes)).toThrow();
   });
 
   test("설정상 최대 적용 횟수가 1인 경우, 최대 1번만 tap이 특정 조건을 만족하는 node에 적용된다. ", () => {
@@ -86,12 +86,12 @@ describe("tapBy", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = {
+    const opc = {
       childrenKey: "children",
       applyTimesBoundary: [0, 1],
     };
     const callback = jest.fn(R.identity);
-    tapBy(ops, R.T, callback, originalNodes);
+    tapBy(opc, R.T, callback, originalNodes);
     expect(callback).toHaveBeenCalledTimes(1);
   });
 
@@ -131,14 +131,14 @@ describe("tapBy", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = {
+    const opc = {
       childrenKey: "children",
       applyTimesBoundary: [0, 5],
     };
     const callback = jest.fn(R.identity);
     const predicate = (node) =>
       ["1", "1-1", "1-1-1", "1-1-1-1", "1-1-1-2"].includes(node.name);
-    tapBy(ops, predicate, callback, originalNodes);
+    tapBy(opc, predicate, callback, originalNodes);
     expect(callback).toHaveBeenCalledTimes(5);
   });
 
@@ -178,11 +178,11 @@ describe("tapBy", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = {
+    const opc = {
       childrenKey: "children",
       applyTimesBoundary: [5, 2],
     };
     const callback = jest.fn(R.identity);
-    expect(() => tapBy(ops, R.always(true), callback, originalNodes)).toThrow();
+    expect(() => tapBy(opc, R.always(true), callback, originalNodes)).toThrow();
   });
 });

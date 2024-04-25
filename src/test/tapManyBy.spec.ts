@@ -42,13 +42,13 @@ describe("tapManyBy", () => {
       { name: "1-3", children: [] },
     ];
 
-    const ops = {
+    const opc = {
       childrenKey: "children",
     };
     const predicate = (node) =>
       ["1", "1-1", "1-1-1", "1-1-1-1", "1-1-1-2"].includes(node.name);
     const callback = jest.fn(R.identity);
-    tapManyBy(ops, predicate, callback, originalNodes);
+    tapManyBy(opc, predicate, callback, originalNodes);
     expect(callback).toHaveBeenCalledTimes(5);
   });
 });
