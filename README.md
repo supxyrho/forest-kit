@@ -1,7 +1,5 @@
 # (알파 버전) Forest Kit JS에 오신걸 환영합니다
 
-![img1](./imgs/forest-kit-logo.webp)
-
 ## 개요
 
 ### 트리구조 조작을 위한 모음 도구
