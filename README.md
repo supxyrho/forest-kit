@@ -1,4 +1,4 @@
-<img width="510" alt="Screenshot 2025-05-16 at 4 15 57 PM" src="https://github.com/user-attachments/assets/1eb98915-f627-455c-bacc-57a2f707b530" /># (알파 버전) Forest Kit JS에 오신걸 환영합니다
+# (알파 버전) Forest Kit JS에 오신걸 환영합니다
 
 ## 개요
 
@@ -19,6 +19,25 @@
   - operator를 작성 시 필요한 helper 함수 모음
 - src/pipe
   - operator를 합성하기 위한 pipe 와 compose 함수가 존재
+
+### 주요 의존성 라이브러리
+ - ramdaJS : 자바스크립트에서 함수형 프로그래밍을 지원하기 위한 유틸리티 라이브러리
+ - jest : TDD 및 커버리지 리포트 측정을 위한 테스트 라이브러리
+
+### operator 함수 중 하나인, `extractLeafNode` 코드
+```typescript
+  import { isLeafNode } from "./isLeafNode";
+  import { deepFlatten } from "./deepFlatten";
+  
+  import { type TOperatorSettings } from "../_internal/type";
+  
+  const R = require("ramda");
+  
+  export const extractLeafNodes = R.curry(
+    <TNode>(ops: TOperatorSettings, nodes: TNode[]): TNode[] =>
+      R.pipe(deepFlatten(ops), R.filter(isLeafNode(ops)))(nodes),
+  );
+```
 
 ### 커버리지 리포트
  - 최대한 많은 엣지 테스트 케이스를 작성하려고 노력했습니다.
