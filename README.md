@@ -1,4 +1,4 @@
-# (알파 버전) Forest Kit JS에 오신걸 환영합니다
+<img width="510" alt="Screenshot 2025-05-16 at 4 15 57 PM" src="https://github.com/user-attachments/assets/1eb98915-f627-455c-bacc-57a2f707b530" /># (알파 버전) Forest Kit JS에 오신걸 환영합니다
 
 ## 개요
 
@@ -9,11 +9,28 @@
 - 계층적 데이터 모델, 중첩된 객체, 또는 복잡한 데이터 트리를 다루고 있든, Forest Kit은 코드상 간결하면서 높은 수준의 함수형 프로그래밍 방식을 통해서 최적의 해결책을 제공합니다.
 - 더이상 Stack Overflow에서 트리 자료구조 처리에 대한 코드를 복사 및 붙여넣기 할 필요가 없습니다. Forest Kit이 모든 것을 해결해 드립니다.
 
-### 코드 예시
+### 폴더 구조
+- src/operator
+  - Tree를 조작, 변환, 관리할 수 있는 함수 단위 기능의 모음    
+- src/test
+  - operator 내 모든 기능에 대한 테스트 코드가 작성됨. 
+  - 커버리지는 
+- src/_internal
+  - operator를 작성 시 필요한 helper 함수 모음
+- src/pipe
+  - operator를 합성하기 위한 pipe 와 compose 함수가 존재
+
+### 커버리지 리포트
+ - 최대한 많은 엣지 테스트 케이스를 작성하려고 노력했습니다.
+<img width="510" alt="Screenshot 2025-05-16 at 4 15 57 PM" src="https://github.com/user-attachments/assets/890da52e-064d-407a-8e03-1d2de395bd81" />
+
+### Forest-kit 코드 사용 예시
 
 ![img1](./imgs/1-mimg.gif)
 
 - 불변성 보장: 각 함수의 결과는 깊은 복사로, 원본 트리에 영향을 미치지 않습니다.
+- 순수함수 기반
+- 함수 합성 및 다형성 만족
 
 ### 간략한 함수 소개 
 
