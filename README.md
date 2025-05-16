@@ -24,6 +24,7 @@
  - jest : TDD 및 커버리지 리포트 측정을 위한 테스트 라이브러리
 
 ### operator 함수 중 하나인, `extractLeafNode` 코드
+  - 트리 내 모든 단말 노드를 추출해서 노드 타입 배열을 반환합니다.
 ```typescript
   import { isLeafNode } from "./isLeafNode";
   import { deepFlatten } from "./deepFlatten";
