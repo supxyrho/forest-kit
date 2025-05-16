@@ -14,7 +14,6 @@
   - Tree를 조작, 변환, 관리할 수 있는 함수 단위 기능의 모음    
 - src/test
   - operator 내 모든 기능에 대한 테스트 코드가 작성됨. 
-  - 커버리지는 
 - src/_internal
   - operator를 작성 시 필요한 helper 함수 모음
 - src/pipe
